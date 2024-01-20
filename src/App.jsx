@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TodoProvider } from "./contexts";
-import { useEffect } from "react";
 import { TodoAddForm, TodoItem } from "./components";
 
 function App() {
