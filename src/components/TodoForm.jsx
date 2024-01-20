@@ -22,7 +22,7 @@ function TodoForm() {
       />
       <button
         type="submit"
-        className="px-3 py-1 bg-green-600 text-white shrink-0"
+        className="px-3 py-1 bg-green-600 text-white shrink-0 border-black border-2"
       >
         Add
       </button>
