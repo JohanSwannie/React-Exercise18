@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TodoProvider } from "./contexts";
 import { useEffect } from "react";
-import { TodoForm, TodoItem } from "./components";
+import { TodoAddForm, TodoItem } from "./components";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -49,7 +49,7 @@ function App() {
         <div className="w-full max-w-4xl mx-auto shadow-lg shadow-white rounded-md px-12 py-16 text-white">
           <h1 className="text-2xl font-bold text-center mb-8">Todos List</h1>
           <div className="mb-4">
-            <TodoForm />
+            <TodoAddForm />
           </div>
           <div className="flex flex-wrap gap-y-3">
             {todos.map((todo) => (
