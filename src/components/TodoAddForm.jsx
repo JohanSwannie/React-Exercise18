@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTodo } from "../contexts/TodoContext";
 
 function TodoAddForm() {
   const [todo, setTodo] = useState("");
+
+  const addToDoMessage = useRef();
+
   const { addTodo } = useTodo();
+
+  useEffect(() => {
+    addToDoMessage.current.focus();
+  }, []);
 
   const add = (e) => {
     e.preventDefault();
@@ -18,6 +25,7 @@ function TodoAddForm() {
         placeholder="Create a Todo......."
         className="w-full border placeholder:text-slate-700 border-black/10 px-3 outline-none duration-150 bg-white/20 py-1.5"
         value={todo}
+        ref={addToDoMessage}
         maxLength={100}
         onChange={(e) => setTodo(e.target.value)}
       />
