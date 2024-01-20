@@ -38,7 +38,7 @@ function TodoItem({ todo }) {
         readOnly={!isTodoEditable}
       />
       <button
-        className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50"
+        className="inline-flex w-8 h-8 rounded-lg text-sm border-black border-2 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50"
         onClick={() => {
           if (todo.completed) return;
           if (isTodoEditable) {
@@ -50,7 +50,7 @@ function TodoItem({ todo }) {
         {isTodoEditable ? "📁" : "✏️"}
       </button>
       <button
-        className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
+        className="inline-flex w-8 h-8 rounded-lg text-sm justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 border-black border-2"
         onClick={() => deleteTodo(todo.id)}
       >
         ❌
