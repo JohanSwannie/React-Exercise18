@@ -11,7 +11,7 @@ function App() {
 
   const updateTodo = (id, todo) => {
     setTodos((prev) =>
-      prev.map((prevTodo) => (prevTodo.id === todo.id ? todo : prevTodo))
+      prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo))
     );
   };
 
@@ -45,7 +45,7 @@ function App() {
       value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}
     >
       <div className="bg-[#118992] min-h-screen select-none">
-        <div className="w-full max-w-4xl mx-auto shadow-lg shadow-white rounded-md px-12 py-16 text-white">
+        <div className="w-full max-w-6xl mx-auto shadow-lg shadow-white rounded-md px-12 py-16 text-white">
           <h1 className="text-2xl font-bold text-center mb-8">Todos List</h1>
           <div className="mb-4">
             <TodoAddForm />
